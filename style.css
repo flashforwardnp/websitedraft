@@ -5,6 +5,89 @@ body {
     background: #f4f4f9;
     color: #333;
 }
+
+/* Navbar */
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000; /* Dark background */
+  padding: 1rem 2rem;
+  color: #007BFF; /* Gold color for text/logo */
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav Item */
+.nav-item {
+  position: relative;
+}
+
+/* Nav Link */
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+}
+
+/* Hover State */
+.nav-link:hover {
+  color: #007BFF;
+}
+
+/* Stroke Animation */
+.stroke {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #007BFF;
+  transform: scaleX(0); /* Hidden by default */
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Top Stroke */
+.top-stroke {
+  top: 0; /* Stroke at the top of the button */
+  transform-origin: left;
+}
+
+/* Bottom Stroke */
+.bottom-stroke {
+  bottom: 0; /* Stroke at the bottom of the button */
+  transform-origin: right;
+}
+
+/* Hover Effect for Strokes */
+.nav-item:hover .stroke {
+  transform: scaleX(1); /* Fully visible on hover */
+}
+
+.nav-item:hover .top-stroke {
+  transform-origin: left;
+}
+
+.nav-item:hover .bottom-stroke {
+  transform-origin: right;
+}
+
 /* General Reset */
 body, html {
     margin: 0;
